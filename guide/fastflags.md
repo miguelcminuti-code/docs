@@ -1,42 +1,170 @@
-# FastFlags
-
-FastFlags (FFlags) are internal Roblox configuration values that control engine behavior. AppleBlox lets you set custom flags through the **Engine** page.
-
-::: warning
-Roblox now uses a whitelist for FastFlags. Many flags that used to work are silently ignored by the client. This is a Roblox-side restriction, not an AppleBlox bug.
-:::
-
-## Preset Settings
-
-The Engine page offers visual controls for common flags:
-
-![Engine page preset settings](/images/fastflags/preset-settings.png)
-
-- **Graphics API** - OpenGL, Metal, or Vulkan
-- **Graphics Quality** - Quality level slider (when enabled)
-- **Level of Detail** - Toggle mesh LOD
-- **Fractional Scaling** - Toggle fractional display scaling
-- **FPS Cap** - Maximum framerate
-
-## Custom Flags
-
-The flag editor gives you full control over any FastFlag:
-
-![FastFlag editor table](/images/fastflags/flag-editor.png)
-
-- **Add** flags manually by name and value.
-- **Import/Export** as JSON, useful for sharing flag profiles.
-- **Enable or disable** individual flags without removing them.
-- **Search and filter** your flag list.
-- **Batch operations** - Select multiple flags to enable, disable, or delete at once.
-
-### Import Format
-
-```json
 {
-    "FFlagExampleFlag": true,
-    "DFIntAnotherFlag": 120
+    "CameraFarZPlane": "3500",
+    "LuauGcGoalCore": "180",
+    "DefaultJitterN": "0",
+    "LuauGcGoal": "200",
+    "ScrollWheelDeltaAmount": "200",
+    "DefaultMeshCacheSizeMB": "256",
+    "DebugDrawEnable": "True",
+    "DFIntMaximumUnstickForceInGs": -50000,
+    "VoiceMetricsDataEnabled3": "True",
+    "DFIntBulletContactBreakOrthogonalThresholdActivatePercent": "2147483647",
+    "DFIntBulletContactBreakOrthogonalThresholdPercent": "-2147483647",
+    "DFIntBulletContactBreakThresholdPercent": "-2147483648",
+    "VoiceMetricsDebugDrawEnabled4": "True",
+    "LDLStasisCacheMaxAge": "2400",
+    "LDLMaxBundleDimension": "24",
+    "TaskSchedulerThreadMin": "12",
+    "RenderUseTextureManager224": "False",
+    "DebugTextureManagerSkipMips": "50",
+    "RenderShadowmapBias": "0.1",
+    "ReplicatorAnimationTrackLimitPerAnimator": "-1",
+    "TargetRefreshRate": "0",
+    "UIOcclusionMetricsRectQueryList": "[{\"id\":\"a1m\", \"pos\":[1, -56, 0, 4], \"size\":[0, 44, 0, 48]}, {\"id\":\"a2m\", \"pos\":[1, -100, 0, 4], \"size\":[0, 88, 0, 48]}, {\"id\":\"a3m\", \"pos\":[0, 0, 0, 4], \"size\":[1, 0, 0, 48]}, {\"id\":\"a4m\", \"pos\":[1, -418, 0, 4], \"size\":[0, 406, 0, 48]},{\"id\":\"lrm\",\"pos\":[0,16,0,6],\"size\":[0,44,0,44]},{\"id\":\"l1m\",\"pos\":[0,66,0,6],\"size\":[0,44,0,44]},{\"id\":\"l2m\",\"pos\":[0,66,0,6],\"size\":[0,88,0,44]},{\"id\":\"l4m\",\"pos\":[0,66,0,6],\"size\":[0,406,0,44]},{\"id\":\"l-pc+sv-m\",\"pos\":[0,66,0,6],\"size\":[0,132,0,44]}]",
+    "GraphicsDisableCloudsForVendorGPUDriver": "PowerVR Rogue GE8300:OpenGL ES 3\\.2 build 1\\.11@5516664|Adreno \\(TM\\) 30\\d:OpenGL.*",
+    "GraphicsDisableUnalignedDxtGPUNameBlacklist": "Radeon RX 570 Series",
+    "ErrorUploadToBacktraceBaseUrl": "https://opt-out.roblox.com/",
+    "IXPGraphicsOptimizationModeBalancedBias": "None",
+    "IXPGraphicsOptimizationModeQualityBias": "None",
+    "TerrainMaterialTablePre2022": "",
+    "OpenTelemetryOtlpEndpoint": "",
+    "TerrainMaterialTable2022": "",
+    "xMaxFrameBufferSize": "10",
+    "DebugPerfMode": "True",
+    "HandleAltEnterFullscreenManually": "False",
+    "HighlightOutlinesOnMobile": "True",
+    "TouchSenderMaxBandwidthBpsScaling": "0",
+    "RccLoadSoundLengthTelemetryEnabled": "False",
+    "ReportAssetRequestV1Telemetry": "False",
+    "DebugForceMSAASamples": "0",
+    "AnimationLodFacsDistanceMin": "10",
+    "JoinDataItemEstimatedCompressionRatioHundreths": "0",
+    "RaknetBandwidthPingSendEveryXSeconds": "1",
+    "LuaAppLegacyInputSettingRefactor": "True",
+    "CanHideGuiGroupId": "32380007",
+    "NetworkQualityResponderUnit": "10",
+    "RobloxGuiBlurIntensity": "0",
+    "MaxProcessPacketsJobScaling": "10000",
+    "ClusterCompressionLevel": "0",
+    "ClientLightingTechnologyChangedTelemetryHundredthsPercent": "0",
+    "GrassMovementReducedMotionFactor": "0",
+    "EnableZstdForClientSettings": "False",
+    "ClientPacketHealthyAllocationPercent": "20",
+    "TargetTimeDelayFacctorTenths": "13",
+    "MaxProcessPacketsStepsAccumulated": "0",
+    "MegaReplicatorNetworkQualityProcessorUnit": "10",
+    "RakNetApplicationFeedbackScaleUpFactorHundredthPercent": "0",
+    "CodecMaxIncomingPackets": "100",
+    "MaxReceiveToDeserializeLatencyMilliseconds": "10",
+    "ClientPacketExcessMicroseconds": "1000",
+    "WaitOnUpdateNetworkLoopEndedMS": "100",
+    "SimSolverResponsiveness": "2147483647",
+    "WaitOnRecvFromLoopEndedMS": "100",
+    "VoiceChatVolumeThousandths": "6000",
+    "RakNetSelectTimeoutMs": "1",
+    "HSRClusterSymmetryDistancePercent": "10000",
+    "NetworkSchemaCompressionRatio": "0",
+    "ClientNetworkInfluxHundredthsPercentage": "0",
+    "MaxProcessPacketsStepsPerCyclic": "5000",
+    "AnimationLodFacsVisibilityDenominator": "2",
+    "DebugCheckRenderThreading": "True",
+    "SmoothMouseSpringFrequencyTenths": "100",
+    "RakNetEnablePoll": "True",
+    "ReplicateCreateToPlayer": "True",
+    "BufferCompressionLevel": "0",
+    "InitialAccelerationLatencyMultTenths": "1",
+    "ClientPacketMaxDelayMs": "1",
+    "NetworkQualityResponderMaxWaitTime": "1",
+    "AnimationLodFacsDistanceMax": "50",
+    "NetworkInProcessLimitGameplayMsClient": "0",
+    "MaxDataPacketPerSend": "100000",
+    "DebugGraphicsPreferD3D11": "True",
+    "GameNetCompressionLodByteBudgetThresholdPct": "0",
+    "MaxAcceptableUpdateDelay": "1",
+    "RakNetApplicationFeedbackScaleUpThresholdPercent": "0",
+    "FacialAnimationStreaming2": "False",
+    "RakNetNakResendDelayMs": "1",
+    "ActivatedCountTimerMSMouse": "0",
+    "RenderLocalLightUpdatesMax": "1",
+    "FastGPULightCulling3": "True",
+    "FRMMaxGrassDistance": "0",
+    "ActivatedCountTimerMSKeyboard": "300",
+    "RenderLocalLightUpdatesMin": "1",
+    "InterpolationMaxDelayMSec": "500",
+    "RakNetLoopMs": "1",
+    "UserCameraControlLastInputTypeUpdate": "False",
+    "GraphicsGLEnableHQShadersExclusion": "False",
+    "TrackCountryRegionAPIHundredthsPercent": "10000",
+    "DebugPauseVoxelizer": "True",
+    "RakNetResendBufferArrayLength": "128",
+    "InterpolationAwareTargetTimeLerpHundredth": "100",
+    "FRMMinGrassDistance": "0",
+    "RenderLocalLightFadeInMs": "0",
+    "GraphicsGLEnableSuperHQShadersExclusion": "False",
+    "RakNetResendRttMultiple": "1",
+    "BatchThumbnailResultsSizeCap": "200",
+    "UseVisBugChecks": "False",
+    "AcceleratorUpdateOnPropsAndValueTimeChange": "True",
+    "ClusterEstimatedCompressionRatioHundredths": "0",
+    "DebugFRMQualityLevelOverride": "1",
+    "LargePacketQueueSizeCutoffMB": "1000",
+    "JoinDataCompressionLevel": "0",
+    "CLI20390_2": "0",
+    "TM2SkipMipsForUnstreamable2": "True",
+    "DebugMechanismInterpolationWorldSpace": "True",
+    "SimLocalBallSocketInterpolation": "True",
+    "CheckPVDifferencesForInterpolationMinRotVelThresholdRadsPerSecHundredth": "0",
+    "CheckPVDifferencesForInterpolationMinVelThresholdStudsPerSecHundredth": "0",
+    "GameplayNetInterpolationDistanceCorrectionSampleMillionth": "1000000",
+    "InterpolationFramePositionThresholdMillionth": "1",
+    "InterpolationFrameRotVelocityThresholdMillionth": "1",
+    "InterpolationFrameVelocityThresholdMillionth": "1",
+    "InterpolationMinAssemblyCount": "1",
+    "InterpolationNumMechanismsBatchSize": "4",
+    "InterpolationNumMechanismsPerTask": "4",
+    "InterpolationNumParallelTasks": "350",
+    "MaxInterpolationRecursionsBeforeCheck": "50",
+    "NumFramesToKeepAfterInterpolation": "2",
+    "InterpolationAwareTargetTime": "False",
+    "MaxAverageFrameDelayExceedFactor": "0",
+    "UserPreventOldBubbleChatOverlap": "False",
+    "EnableQuickGameLaunch": "False",
+    "EnableBubbleChatFromChatService": "False",
+    "LightstepHTTPTransportUrlPath": "None",
+    "RobloxAnalyticsURL": "",
+    "AnalyticsEventStreamUrlEndpoint": "None",
+    "CrashUploadToBacktraceMacPlayerToken": "",
+    "CrashUploadToBacktraceBaseUrl": "",
+    "LightstepHTTPTransportUrlHost": "",
+    "LightstepToken": "",
+    "VisibilityCheckRayCastLimitPerFrame": "10",
+    "TimeBetweenSendConnectionAttemptsMS": "200",
+    "RaknetBandwidthInfluxHundredthsPercentageV2": "10000",
+    "PhysicsReceiveNumParallelTasks": "12",
+    "TextureCompositorActiveJobs": "0",
+    "CrashUploadToBacktraceWindowsPlayerToken": "",
+    "SimWorldTaskQueueParallelTasks": "12",
+    "SmoothClusterTaskQueueMaxParallelTasks": "12",
+    "PhysicsAnalyticsHighFrequencyIntervalSec": "12",
+    "DebugSkyGray": "False",
+    "DisableFastLogTelemetry": "True",
+    "EnableZstdDictionaryForClientSettings": "False",
+    "JointIrregularityOptimization": "True",
+    "RakNetCalculateApplicationFeedback2": "True",
+    "PerformanceControlTextureQualityBestUtility": "-1",
+    "TerrainArraySliceSize": "4",
+    "ReportDeviceInfoRollout": "0",
+    "MegaReplicatorNumParallelTasks": "12",
+    "ReplicationDataCacheNumParallelTasks": "12",
+    "BufferCompressionThreshold": "100",
+    "RenderNodeEnterSleepingFrames": "0",
+    "RenderDx11LowEndCPUMemoryMB": "512",
+    "UnifiedLightingBlendZone": "40000",
+    "InputRecorderBufferSizeBytes": "1",
+    "TaskSchedulerAutoThreadLimit": "12",
+    "NumFramesToCaptureCallStack": "1",
+    "TerrainOTAMaxTextureSize": "1024",
+    "LDLStasisCachePurgeRate": "1200",
+    "LuaGcParallelMinMultiTasks": "4",
+    "RenderDx11LowEndCoreCount": "4"
 }
-```
-
-Flags are written to Roblox's `ClientAppSettings.json` at launch.
